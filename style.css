@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffdf6;
+    color: #2c2c2c;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 253, 246, 0.92);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.logo {
+    color: #e68a00;
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #e68a00;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 140px 8% 80px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.tag,
+.eyebrow {
+    color: #e68a00;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.hero h2,
+.section h2,
+.about-section h2 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.hero h2 span {
+    color: #f4b400;
+}
+
+.hero p,
+.section p,
+.about-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.price-card {
+    margin: 28px 0;
+    padding: 24px;
+    max-width: 260px;
+    background: #fff1b8;
+    border: 2px solid #f4b400;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(230, 138, 0, 0.15);
+}
+
+.price-card h3 {
+    font-size: 1.8rem;
+}
+
+.price-card strong {
+    color: #e68a00;
+    font-size: 2rem;
+}
+
+.btn,
+button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #f4b400;
+    color: #2c2c2c;
+    text-decoration: none;
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-3px);
+    background: #e68a00;
+    color: white;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popcorn-bucket {
+    width: 330px;
+    height: 330px;
+    background: linear-gradient(135deg, #fff1b8, #f4b400);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 9rem;
+    box-shadow: 0 30px 80px rgba(230, 138, 0, 0.25);
+}
+
+.section,
+.about-section {
+    padding: 100px 8%;
+}
+
+.card-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #ffe8a3;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+    color: #e68a00;
+    margin-bottom: 12px;
+}
+
+.about-section {
+    background: #fff6d6;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-section p {
+    margin-bottom: 18px;
+}
+
+.about-box {
+    padding: 50px;
+    border-radius: 30px;
+    background: #f4b400;
+    color: #2c2c2c;
+    box-shadow: 0 20px 50px rgba(230, 138, 0, 0.22);
+}
+
+.about-box h3 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.contact-section {
+    background: #fffdf6;
+}
+
+.contact-intro {
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    padding: 30px;
+    background: #fff6d6;
+    border-radius: 24px;
+}
+
+.contact-info p {
+    margin-bottom: 16px;
+}
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ffe09a;
+    border-radius: 14px;
+    background: white;
+    font: inherit;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    background: #2c2c2c;
+    color: #fff6d6;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero,
+    .about-section,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+    .hero {
+        padding-top: 180px;
+    }
+
+    .popcorn-bucket {
+        width: 230px;
+        height: 230px;
+        font-size: 6rem;
+    }
+
+    .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

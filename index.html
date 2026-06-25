@@ -125,13 +125,47 @@
             <p><strong>Location:</strong> Riba Cross, Limpopo</p>
         </div>
 
-        <form action="thanks.html" method="post" class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <input type="text" placeholder="Phone Number">
-            <textarea placeholder="Your Order / Enquiry"></textarea>
-            <button type="submit">Send Enquiry</button>
-        </form>
+        <form
+    action="https://formspree.io/f/xaqgnopz"
+    method="POST">
+
+    <input
+        type="hidden"
+        name="_subject"
+        value="New Hyena Popcorn Order">
+
+    <input
+        type="hidden"
+        name="_next"
+        value="https://thabang-malele.github.io/HyenaPopcorn/thanks.html">
+
+    <input
+        type="text"
+        name="customer_name"
+        placeholder="Full Name"
+        required>
+
+    <input
+        type="email"
+        name="customer_email"
+        placeholder="Email Address"
+        required>
+
+    <input
+        type="tel"
+        name="customer_phone"
+        placeholder="Phone Number">
+
+    <textarea
+        name="order_details"
+        placeholder="Tell us what you'd like to order..."
+        required></textarea>
+
+    <button type="submit">
+        Send Order
+    </button>
+
+</form>
     </div>
 </section>
 
